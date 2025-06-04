@@ -3,17 +3,7 @@
   /** QuickNote Organizer main container component.
    * No backend logic – all state is local. Skeleton for note CRUD, search, filter, modal edit. 
    */
-  import { onMount } from 'svelte';
-
-  // Color palette & theme
-  const COLORS = {
-    primary: "#4A90E2",
-    secondary: "#FFFFFF",
-    accent: "#F5A623",
-    text: "#222",
-    border: "#E0E0E0",
-    shadow: "rgba(50, 50, 93, 0.1)"
-  };
+  // All color theme values are now in CSS, JS COLORS removed.
 
   // Mock category/tag list
   let categories = ['All', 'Work', 'Personal', 'Ideas'];
