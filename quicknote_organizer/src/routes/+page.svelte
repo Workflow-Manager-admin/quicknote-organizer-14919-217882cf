@@ -78,8 +78,8 @@
 
 <style>
   :global(html, body) {
-    background: {COLORS.secondary};
-    color: {COLORS.text};
+    background: #FFFFFF;
+    color: #222;
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -89,9 +89,9 @@
   .quicknote-container {
     max-width: 600px;
     margin: 2rem auto 4rem auto;
-    background: {COLORS.secondary};
+    background: #FFFFFF;
     border-radius: 10px;
-    box-shadow: 0 2px 12px {COLORS.shadow};
+    box-shadow: 0 2px 12px rgba(50, 50, 93, 0.1);
     padding: 2rem 1.5rem 3rem 1.5rem;
     position: relative;
     min-height: 500px;
@@ -106,15 +106,15 @@
     flex: 1;
     padding: 0.7rem 1rem;
     border-radius: 5px;
-    border: 1px solid {COLORS.border};
+    border: 1px solid #E0E0E0;
     font-size: 1rem;
-    background: {COLORS.secondary};
-    color: {COLORS.text};
+    background: #FFFFFF;
+    color: #222;
     outline: none;
     transition: border 0.2s;
   }
   .search-bar input:focus {
-    border: 1.5px solid {COLORS.primary};
+    border: 1.5px solid #4A90E2;
   }
 
   .category-filters {
@@ -125,20 +125,20 @@
   }
   .category-btn {
     border: none;
-    background: {COLORS.secondary};
-    color: {COLORS.text};
+    background: #FFFFFF;
+    color: #222;
     padding: 0.4rem 0.9rem;
     border-radius: 5px;
-    border: 1.5px solid {COLORS.border};
+    border: 1.5px solid #E0E0E0;
     cursor: pointer;
     font-size: 0.97rem;
     transition: background 0.18s, border 0.18s;
   }
   .category-btn.selected,
   .category-btn:hover {
-    background: {COLORS.primary};
+    background: #4A90E2;
     color: #fff;
-    border-color: {COLORS.primary};
+    border-color: #4A90E2;
   }
 
   .notes-list {
@@ -149,9 +149,9 @@
   }
   .note-card {
     background: #fff;
-    border: 1px solid {COLORS.border};
+    border: 1px solid #E0E0E0;
     border-radius: 8px;
-    box-shadow: 0 1px 4px {COLORS.shadow};
+    box-shadow: 0 1px 4px rgba(50, 50, 93, 0.1);
     padding: 1rem 1.1rem 0.9rem 1.1rem;
     width: calc(50% - 0.5rem);
     min-width: 210px;
@@ -163,14 +163,14 @@
     justify-content: space-between;
   }
   .note-card:hover {
-    border-color: {COLORS.accent};
-    box-shadow: 0 4px 12px {COLORS.shadow};
+    border-color: #F5A623;
+    box-shadow: 0 4px 12px rgba(50, 50, 93, 0.1);
   }
   .note-title {
     font-weight: 600;
     font-size: 1.02rem;
     margin-bottom: 0.3rem;
-    color: {COLORS.primary};
+    color: #4A90E2;
   }
   .note-snippet {
     font-size: 0.93rem;
@@ -180,7 +180,7 @@
   }
   .note-meta {
     font-size: 0.82rem;
-    color: {COLORS.accent};
+    color: #F5A623;
     margin-top: auto;
     margin-bottom: 0.3rem;
   }
@@ -190,13 +190,13 @@
     position: fixed;
     bottom: 2.4rem;
     right: 2.4rem;
-    background: {COLORS.accent};
+    background: #F5A623;
     color: #fff;
     border: none;
     border-radius: 50%;
     width: 62px;
     height: 62px;
-    box-shadow: 0 2px 10px {COLORS.primary}33;
+    box-shadow: 0 2px 10px #4A90E233;
     font-size: 2.15rem;
     cursor: pointer;
     display: flex;
@@ -206,8 +206,8 @@
     transition: background 0.14s, box-shadow 0.18s;
   }
   .fab:hover {
-    background: {COLORS.primary};
-    box-shadow: 0 4px 16px {COLORS.shadow};
+    background: #4A90E2;
+    box-shadow: 0 4px 16px rgba(50, 50, 93, 0.1);
   }
 
   /* Modal styling */
@@ -224,7 +224,7 @@
   .modal-card {
     background: #fff;
     border-radius: 9px;
-    box-shadow: 0 8px 32px {COLORS.shadow};
+    box-shadow: 0 8px 32px rgba(50, 50, 93, 0.1);
     max-width: 420px;
     width: 94vw;
     padding: 2.2rem 1.6rem 1.5rem 1.6rem;
@@ -240,26 +240,26 @@
   .modal-card label {
     font-weight: 500;
     margin-bottom: 2px;
-    color: {COLORS.primary};
+    color: #4A90E2;
     font-size: 0.98rem;
     margin-top: 1.1rem;
   }
   .modal-card input, .modal-card textarea, .modal-card select {
-    border: 1.3px solid {COLORS.border};
+    border: 1.3px solid #E0E0E0;
     border-radius: 6px;
     padding: 0.64rem 0.9rem;
     width: 100%;
     font-size: 1rem;
     margin-top: 0.15rem;
     background: #fff;
-    color: {COLORS.text};
+    color: #222;
     margin-bottom: 0.7rem;
     resize: none;
     outline: none;
     transition: border 0.2s;
   }
   .modal-card input:focus, .modal-card textarea:focus, .modal-card select:focus {
-    border-color: {COLORS.primary};
+    border-color: #4A90E2;
   }
   .modal-actions {
     display: flex;
@@ -274,28 +274,28 @@
     font-size: 1rem;
     cursor: pointer;
     font-weight: 500;
-    background: {COLORS.primary};
+    background: #4A90E2;
     color: #fff;
     transition: background 0.16s, color 0.14s, box-shadow 0.18s;
-    box-shadow: 0 1px 4px {COLORS.shadow};
+    box-shadow: 0 1px 4px rgba(50, 50, 93, 0.1);
   }
   .btn.accent {
-    background: {COLORS.accent};
+    background: #F5A623;
     color: #fff;
   }
   .btn.delete {
     background: #fff;
-    border: 1.5px solid {COLORS.accent};
-    color: {COLORS.accent};
+    border: 1.5px solid #F5A623;
+    color: #F5A623;
   }
   .btn.cancel {
     background: #fff;
-    color: {COLORS.primary};
-    border: 1.5px solid {COLORS.primary};
+    color: #4A90E2;
+    border: 1.5px solid #4A90E2;
   }
   .btn:hover {
     opacity: 0.88;
-    box-shadow: 0 2px 12px {COLORS.shadow};
+    box-shadow: 0 2px 12px rgba(50, 50, 93, 0.1);
   }
 </style>
 
@@ -312,7 +312,7 @@
 
   <!-- Category Filters -->
   <div class="category-filters">
-    {#each categories as cat}
+    {#each categories as cat (cat)}
       <button
         class="category-btn {selectedCategory === cat ? 'selected' : ''}"
         type="button"
