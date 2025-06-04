@@ -328,16 +328,16 @@
       <span style="opacity:0.7;padding:2.3rem;font-size:1.1rem;">No notes found.</span>
     {/if}
     {#each filteredNotes() as note (note.id)}
-      <div
+      <button
         class="note-card"
+        type="button"
         on:click={() => openEditNoteModal(note)}
-        tabindex="0"
         aria-label={`Open note: ${note.title}`}
       >
         <div class="note-title">{note.title}</div>
         <div class="note-snippet">{note.content.length > 74 ? note.content.slice(0,74) + '…' : note.content}</div>
         <div class="note-meta">{note.category}</div>
-      </div>
+      </button>
     {/each}
   </div>
 </div>
