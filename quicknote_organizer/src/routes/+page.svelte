@@ -279,10 +279,6 @@
     transition: background 0.16s, color 0.14s, box-shadow 0.18s;
     box-shadow: 0 1px 4px rgba(50, 50, 93, 0.1);
   }
-  .btn.accent {
-    background: #F5A623;
-    color: #fff;
-  }
   .btn.delete {
     background: #fff;
     border: 1.5px solid #F5A623;
@@ -347,8 +343,22 @@
 
 <!-- Modal for add/edit note -->
 {#if showModal}
-  <div class="modal-backdrop" on:click={closeModal}>
-    <div class="modal-card" on:click|stopPropagation>
+  <div
+    class="modal-backdrop"
+    tabIndex="0"
+    role="button"
+    aria-label="Close modal"
+    on:click={closeModal}
+    on:keydown={(e) => { if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') closeModal(); }}
+  >
+    <div
+      class="modal-card"
+      role="dialog"
+      aria-modal="true"
+      tabIndex="0"
+      on:click|stopPropagation
+      on:keydown={(e) => { if (e.key === 'Escape') closeModal(); }}
+    >
       <h2 style="margin-top:0;">{isEdit ? "Edit note" : "New note"}</h2>
 
       <label for="note-title">Title</label>
@@ -358,7 +368,6 @@
         placeholder="Title"
         bind:value={modalNote.title}
         maxlength="60"
-        autofocus
       >
 
       <label for="note-content">Content</label>
@@ -376,7 +385,7 @@
         id="note-category"
         bind:value={modalNote.category}
       >
-        {#each categories.filter(c => c !== 'All') as cat}
+        {#each categories.filter(c => c !== 'All') as cat (cat)}
           <option value={cat}>{cat}</option>
         {/each}
       </select>
